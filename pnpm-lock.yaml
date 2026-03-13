@@ -30,6 +30,9 @@ importers:
       '@types/react-dom':
         specifier: ^19
         version: 19.2.3(@types/react@19.2.14)
+      '@typescript/native-preview':
+        specifier: 7.0.0-dev.20260313.1
+        version: 7.0.0-dev.20260313.1
       babel-plugin-react-compiler:
         specifier: 1.0.0
         version: 1.0.0
@@ -647,6 +650,45 @@ packages:
   '@types/react@19.2.14':
     resolution: {integrity: sha512-ilcTH/UniCkMdtexkoCN0bI7pMcJDvmQFPvuPvmEaYA/NSfFTAgdUSLAoVjaRJm7+6PvcM+q1zYOwS4wTYMF9w==}
 
+  '@typescript/native-preview-darwin-arm64@7.0.0-dev.20260313.1':
+    resolution: {integrity: sha512-/fU2IvlRQWOy63xSzkejW7tTQpsL5dQ/ATIsJFlK75vS941CnNJY8dAx3iQYLkHMhS45hhCIR+bbJPRaacq/fw==}
+    cpu: [arm64]
+    os: [darwin]
+
+  '@typescript/native-preview-darwin-x64@7.0.0-dev.20260313.1':
+    resolution: {integrity: sha512-oy7Ew1J3+YtO9QsqVGkncQ8bCwVPxNk8nSO2q1sHLccyYq0f4eDaZTlJ+u9Ynry548NwNucLh9wE+DWfWhzU3Q==}
+    cpu: [x64]
+    os: [darwin]
+
+  '@typescript/native-preview-linux-arm64@7.0.0-dev.20260313.1':
+    resolution: {integrity: sha512-KkbAweTnBpmQ8wCGHjrLzPX+FuwhSrVERNqyGPaq/267Sxt0UwbIO3rZduXlq5UUln1+/z7uT/BNJiuoFW3iLw==}
+    cpu: [arm64]
+    os: [linux]
+
+  '@typescript/native-preview-linux-arm@7.0.0-dev.20260313.1':
+    resolution: {integrity: sha512-IAx0ajfEiL1tJg1N6+/nHXJKebNe72yanY2N5bicwIB3t2BmydnrEPG+/OFVqc+prfJngxSx/61mvkXScZePzg==}
+    cpu: [arm]
+    os: [linux]
+
+  '@typescript/native-preview-linux-x64@7.0.0-dev.20260313.1':
+    resolution: {integrity: sha512-9LCNgXVNoArHlMuL6yFKJxSdshiiadTfW/pU4tz4Vbg+Dg9La1VE9mLlBdijy5ZIg4nsOFpR8JTDURcA1RoHXw==}
+    cpu: [x64]
+    os: [linux]
+
+  '@typescript/native-preview-win32-arm64@7.0.0-dev.20260313.1':
+    resolution: {integrity: sha512-cP2y5hb2xhfEDIgxdhxhPXa/D5Lq3yj6zxVuhh9ZkUariF+ZAmF4pySlIA+7NdprgTQqvNY5Mp70cPUiYD3yUg==}
+    cpu: [arm64]
+    os: [win32]
+
+  '@typescript/native-preview-win32-x64@7.0.0-dev.20260313.1':
+    resolution: {integrity: sha512-8KDfi7U1enFo4z6F0qe4Rd5QzBhk+4cwpZtOGAT9lgyR4pF/mo8zQd0t+Hlkj6d87W057RP8lgCGTGfclGWxUg==}
+    cpu: [x64]
+    os: [win32]
+
+  '@typescript/native-preview@7.0.0-dev.20260313.1':
+    resolution: {integrity: sha512-x+ZrFAEq+c7bF4Ml8+abYZ9vW6mzu22fmcPbDcBmUl/4uGFCYXXww0FS3+me9MfdSOCAPtqcZtwApx1RQO2X/w==}
+    hasBin: true
+
   babel-plugin-react-compiler@1.0.0:
     resolution: {integrity: sha512-Ixm8tFfoKKIPYdCCKYTsqv+Fd4IJ0DQqMyEimo+pxUOMUR9cVPlwTrFt9Avu+3cb6Zp3mAzl+t1MrG2fxxKsxw==}
 
@@ -1236,6 +1278,37 @@ snapshots:
   '@types/react@19.2.14':
     dependencies:
       csstype: 3.2.3
+
+  '@typescript/native-preview-darwin-arm64@7.0.0-dev.20260313.1':
+    optional: true
+
+  '@typescript/native-preview-darwin-x64@7.0.0-dev.20260313.1':
+    optional: true
+
+  '@typescript/native-preview-linux-arm64@7.0.0-dev.20260313.1':
+    optional: true
+
+  '@typescript/native-preview-linux-arm@7.0.0-dev.20260313.1':
+    optional: true
+
+  '@typescript/native-preview-linux-x64@7.0.0-dev.20260313.1':
+    optional: true
+
+  '@typescript/native-preview-win32-arm64@7.0.0-dev.20260313.1':
+    optional: true
+
+  '@typescript/native-preview-win32-x64@7.0.0-dev.20260313.1':
+    optional: true
+
+  '@typescript/native-preview@7.0.0-dev.20260313.1':
+    optionalDependencies:
+      '@typescript/native-preview-darwin-arm64': 7.0.0-dev.20260313.1
+      '@typescript/native-preview-darwin-x64': 7.0.0-dev.20260313.1
+      '@typescript/native-preview-linux-arm': 7.0.0-dev.20260313.1
+      '@typescript/native-preview-linux-arm64': 7.0.0-dev.20260313.1
+      '@typescript/native-preview-linux-x64': 7.0.0-dev.20260313.1
+      '@typescript/native-preview-win32-arm64': 7.0.0-dev.20260313.1
+      '@typescript/native-preview-win32-x64': 7.0.0-dev.20260313.1
 
   babel-plugin-react-compiler@1.0.0:
     dependencies:

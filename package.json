@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "tsgo --noEmit && next build",
     "start": "next start",
     "lint": "oxlint --fix",
     "fmt": "oxfmt",
@@ -20,6 +20,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@typescript/native-preview": "7.0.0-dev.20260313.1",
     "babel-plugin-react-compiler": "1.0.0",
     "husky": "^9.1.7",
     "nano-staged": "^0.9.0",
