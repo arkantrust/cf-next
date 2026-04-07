@@ -2,14 +2,6 @@ import { Suspense } from "react";
 
 import { ServerTime } from "@/components/server-time";
 import { TimeDisplay, TimeDisplaySkeleton } from "@/components/time-display";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
 
 export default async function Home() {
   return (
@@ -28,26 +20,30 @@ export default async function Home() {
           </a>
           .
         </p>
-        <Card className="mx-auto mt-3 w-full max-w-md">
-          <CardHeader>
-            <CardTitle>Streaming a client component</CardTitle>
-            <CardDescription>
-              The times below are rendered in the client and server respectively.
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <TimeDisplay label={"Local time"} /> {/* CSR */}
-            <Suspense fallback={<TimeDisplaySkeleton />}>
-              <ServerTime /> {/* SSR */}
-            </Suspense>
-          </CardContent>
-          <CardFooter>
-            <p>
-              Local time is rendered in the client, while server time is instantiated in the server
-              at request time.
-            </p>
-          </CardFooter>
-        </Card>
+        <section className="mt-10 w-full max-w-2xl">
+          <p className="text-xs tracking-[0.28em] text-muted-foreground uppercase">
+            Streaming render comparison
+          </p>
+          <div className="mt-4 grid gap-6 border-y border-border/60 py-6 sm:grid-cols-[1fr_auto_1fr] sm:items-start">
+            <div className="flex flex-col gap-2">
+              <p className="text-sm font-medium text-foreground">Client render</p>
+              <TimeDisplay label={"Local time"} className="text-base" />
+            </div>
+
+            <div className="hidden h-full w-px bg-border/60 sm:block" aria-hidden="true" />
+
+            <div className="flex flex-col gap-2">
+              <p className="text-sm font-medium text-foreground">Server render</p>
+              <Suspense fallback={<TimeDisplaySkeleton />}>
+                <ServerTime />
+              </Suspense>
+            </div>
+          </div>
+          <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+            Local time updates in the browser, while server time is created at request time and
+            streamed in when ready.
+          </p>
+        </section>
       </main>
     </div>
   );

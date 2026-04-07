@@ -5,7 +5,5 @@ export async function ServerTime() {
   await new Promise((resolve) => setTimeout(() => resolve(null), 1500));
   const date = new Date();
 
-  return (
-    <TimeDisplay label={"Server time"} initialDate={date} updatable={false} className="mt-2" />
-  );
+  return <TimeDisplay label={"Server time"} initialDate={date} updatable={false} />;
 }
